@@ -25,7 +25,7 @@ WAVEFORM = run_waves.vcd
 
 SV_FILES = $(wildcard $(INC_PATH)/*.sv $(RTL_PATH)/*.sv $(TB_PATH)/$(SV_TOP).sv)
 
-.PHONY: all clean compile sim view
+.PHONY: all clean compile sim view gtkwaverc_symbolic_link
 
 all: compile sim view
 
@@ -54,3 +54,6 @@ sim: $(OUTPUT_PATH)/$(COMPILE_LOG)
 
 view: $(OUTPUT_PATH)/$(RUN_LOG)
 	gtkwave $(OUTPUT_PATH)/$(WAVEFORM)
+
+gtkwaverc_symbolic_link:
+	ln -s ../../.gtkwaverc .gtkwaverc
