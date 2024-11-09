@@ -8,13 +8,13 @@ VERILATOR_COMPILE_OPTS = -cc -O2 -j 1 --threads 1 --binary
 VERILATOR_TRACING_OPTS = --trace --trace-params --trace-structs
 
 # Paths
-RTL_PATH = ../../../submodules/MIRISCV/miriscv/rtl
+RTL_PATH = ../../submodules/MIRISCV/miriscv/rtl
 
 INC_PATH = $(RTL_PATH)/include
 
-TB_PATH = ../tb
+TB_PATH = ./tb
 
-OUTPUT_PATH =  out/verilator
+OUTPUT_PATH =  build/out/verilator
 
 #  Files
 SV_TOP = miriscv_tb_top
@@ -23,12 +23,16 @@ COMPILE_LOG = compile.log
 RUN_LOG = run.log
 WAVEFORM = run_waves.vcd
 
-.PHONY: all clean
+SV_FILES = $(wildcard $(INC_PATH)/*.sv $(RTL_PATH)/*.sv $(TB_PATH)/$(SV_TOP).sv)
+
+.PHONY: all clean compile sim view
+
+all: compile sim view
 
 clean:
 	rm -rf $(OUTPUT_PATH)/*
 
-compile:
+compile: $(SV_FILES)
 	verilator \
 	$(VERILATOR_NO_WARN_OPTS) \
 	$(VERILATOR_COMPILE_OPTS) \
@@ -42,11 +46,11 @@ compile:
 	-Mdir $(OUTPUT_PATH) | tee $(OUTPUT_PATH)/$(COMPILE_LOG)
     # -Mdir $(OUTPUT_PATH) &> $(OUTPUT_PATH)/$(COMPILE_LOG)
 
-sim: compile
+sim: $(OUTPUT_PATH)/$(COMPILE_LOG)
 	$(OUTPUT_PATH)/V$(SV_TOP) \
 	+bin=$(TEST_PROG) \
   	+dump=$(OUTPUT_PATH)/$(WAVEFORM) | tee $(OUTPUT_PATH)/$(RUN_LOG)
   	# +dump=$(OUTPUT_PATH)/run_waves.vcd &> $(OUTPUT_PATH)/run.log
 
-view: sim
+view: $(OUTPUT_PATH)/$(RUN_LOG)
 	gtkwave $(OUTPUT_PATH)/$(WAVEFORM)
