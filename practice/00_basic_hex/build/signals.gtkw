@@ -1,0 +1,57 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Tue Sep 15 14:05:04 2026
+[*]
+[dumpfile] "/home/alexander/study/riscv-tests-intro/practice/00_basic_hex/build/out/verilator/run_waves.vcd"
+[dumpfile_mtime] "Tue Sep 15 13:56:53 2026"
+[dumpfile_size] 169446
+[savefile] "/home/alexander/study/riscv-tests-intro/practice/00_basic_hex/build/signals.gtkw"
+[timestart] 133
+[size] 1920 1047
+[pos] -1 -1
+*-5.000000 235 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.miriscv_tb_top.
+[treeopen] TOP.miriscv_tb_top.DUT.
+[treeopen] TOP.miriscv_tb_top.DUT.i_decode_stage.
+[sst_width] 314
+[signals_width] 301
+[sst_expanded] 1
+[sst_vpaned_height] 311
+@29
+TOP.miriscv_tb_top.DUT.arstn_i
+@23
+TOP.miriscv_tb_top.DUT.boot_addr_i[31:0]
+@29
+TOP.miriscv_tb_top.DUT.clk_i
+@23
+TOP.miriscv_tb_top.DUT.data_rdata_i[31:0]
+@29
+TOP.miriscv_tb_top.DUT.data_rvalid_i
+@23
+TOP.miriscv_tb_top.DUT.instr_rdata_i[31:0]
+@29
+TOP.miriscv_tb_top.DUT.instr_rvalid_i
+@23
+[color] 7
+TOP.miriscv_tb_top.DUT.data_addr_o[31:0]
+TOP.miriscv_tb_top.DUT.data_be_o[3:0]
+@29
+[color] 3
+TOP.miriscv_tb_top.DUT.data_req_o
+@23
+[color] 7
+TOP.miriscv_tb_top.DUT.data_wdata_o[31:0]
+@29
+TOP.miriscv_tb_top.DUT.data_we_o
+@23
+TOP.miriscv_tb_top.DUT.instr_addr_o[31:0]
+@29
+TOP.miriscv_tb_top.DUT.instr_req_o
+@23
+TOP.miriscv_tb_top.mem[16][31:0]
+TOP.miriscv_tb_top.DUT.i_decode_stage.i_gpr.rf_reg[1][31:0]
+TOP.miriscv_tb_top.DUT.i_decode_stage.i_gpr.rf_reg[2][31:0]
+TOP.miriscv_tb_top.DUT.i_decode_stage.i_gpr.rf_reg[3][31:0]
+[pattern_trace] 1
+[pattern_trace] 0
