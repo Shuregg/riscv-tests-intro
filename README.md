@@ -95,7 +95,7 @@ git -c submodule."submodules/riscv-gnu-toolchain".update=none submodule update -
 
 ### Ручная установка
 
-Вы можете вручную **установить следущее ПО** на свой дистрибутив Linux:
+Вы можете вручную **установить следующее ПО** на свой дистрибутив Linux:
 
 - [Генератор случайных инструкций RISC-V AAPG `2d7d40f`](https://github.com/riscv-tests-intro/aapg/tree/2d7d40feb8ce7ae20ccbe8225ed9947c188e9cc3);
 - [Программная модель RISC-V Spike ISS `887d02e`](https://github.com/riscv-software-src/riscv-isa-sim/tree/887d02e42124ddc86476dfdf4aad4be8ba7f0aef);
@@ -107,7 +107,7 @@ git -c submodule."submodules/riscv-gnu-toolchain".update=none submodule update -
 
 Так как все ПО является открытым, то **б*о*льшая его часть жестко привязана к конкретным коммитам**. Все ПО на нужных коммитах находится в директории [`submodules`](./submodules/). **Инструкция по ручной установке**, которая привязана к данным сабмодулям, находится в файле [`doc/soft.md`](./doc/soft.md).
 
-Ручная установка проверена и гаранитируется только для [конкретной версии Ubuntu 22.04 LTS](https://disk.yandex.ru/d/RVNDosRvrKFHSA). Однако никаких ограничений на установку на другие дистрибутивы не накладывается.
+Ручная установка проверена и гарантируется только для [конкретной версии Ubuntu 22.04 LTS](https://disk.yandex.ru/d/RVNDosRvrKFHSA). Однако никаких ограничений на установку на другие дистрибутивы не накладывается.
 
 ## Маршрут прохождения
 
