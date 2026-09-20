@@ -137,13 +137,13 @@ endclass
 
 ![](../../doc/pic/hammer_0.png)
 
-Для тестирования процессорного ядра будет использоваться генератор случайных RISC-V инструкций [APPG](https://gitlab.com/shaktiproject/tools/aapg/-/tree/7ce4a9073a040bbc784edfd1c8a7b21f269f7766), написанный на языке Python. Генератор поддерживает набор расширений `RV32IMAFDC_Zb_Zicsr` для 32-битных машин и `RV64IMAFDC_Zb_Zicsr` для 64-битных машин. Документация на генератор доступна по [ссылке](https://gitlab.com/shaktiproject/tools/aapg/-/wikis/Wiki-AAPG-%5B2.2.2%5D).
+Для тестирования процессорного ядра будет использоваться генератор случайных RISC-V инструкций [AAPG](https://gitlab.com/shaktiproject/tools/aapg/-/tree/7ce4a9073a040bbc784edfd1c8a7b21f269f7766), написанный на языке Python. Генератор поддерживает набор расширений `RV32IMAFDC_Zb_Zicsr` для 32-битных машин и `RV64IMAFDC_Zb_Zicsr` для 64-битных машин. Документация на генератор доступна по [ссылке](https://gitlab.com/shaktiproject/tools/aapg/-/wikis/Wiki-AAPG-%5B2.2.2%5D).
 
 В настоящее время самым популярным генератором случайных RISC-V инструкций является [RISCV-DV](https://github.com/chipsalliance/riscv-dv). Однако его использование возможно только при наличии доступа к коммерческим симуляторам, таким как [Siemens QuestaSim](https://eda.sw.siemens.com/en-US/ic/questa-one/simulation/questa-one-sim/), [Synopsys VCS](https://www.synopsys.com/verification/simulation/vcs.html), [Cadence Xcelium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/simulation-and-testbench-verification/xcelium-simulator.html).
 
-Одной из важных особенностей курса является **использование только открытого ПО**, так что в рамках данного занятия был сделан выбор в пользу менее совершенного, но полностью отрытого [AAPG](https://gitlab.com/shaktiproject/tools/aapg/-/tree/7ce4a9073a040bbc784edfd1c8a7b21f269f7766), обладающего, тем не менее, внушительным набором поддерживаемых расширений.
+Одной из важных особенностей курса является **использование только открытого ПО**, так что в рамках данного занятия был сделан выбор в пользу менее совершенного, но полностью открытого [AAPG](https://gitlab.com/shaktiproject/tools/aapg/-/tree/7ce4a9073a040bbc784edfd1c8a7b21f269f7766), обладающего, тем не менее, внушительным набором поддерживаемых расширений.
 
-В будущем, когда [Verilator](https://github.com/verilator/verilator/tree/522bead374d6b7b2adb316304126e5361b18bcf1) будет полностью поддерживать библиотеки [универсальной методолгии верификации (Universal Verification Methodology, UVM)](https://accellera.org/downloads/standards/uvm), генератор может быть заменен автором курса.
+В будущем, когда [Verilator](https://github.com/verilator/verilator/tree/522bead374d6b7b2adb316304126e5361b18bcf1) будет полностью поддерживать библиотеки [универсальной методологии верификации (Universal Verification Methodology, UVM)](https://accellera.org/downloads/standards/uvm), генератор может быть заменен автором курса.
 
 ---
 
@@ -1767,7 +1767,7 @@ riscv32-unknown-elf-objcopy -O binary out/aapg/bin/program.riscv \
     out/aapg/bin/program.bin &>> out/aapg/gen.log
 ```
 
-Аргумент `-O binary` определяет формат вывода. Выражение `&>> out/aapg/gen.log` перенаправляет поток вывода в файл `out/aapg/gen.log`. По сути этот файл будет являться лог-файлом экспорт.
+Аргумент `-O binary` определяет формат вывода. Выражение `&>> out/aapg/gen.log` перенаправляет поток вывода в файл `out/aapg/gen.log`. По сути этот файл будет являться лог-файлом экспорта.
 
 ### Запуск симуляции
 

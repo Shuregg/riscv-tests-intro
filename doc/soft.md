@@ -82,7 +82,7 @@ cd build
 sudo make -j $(nproc)
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/riscv-gnu-toolchain/bin"':$PATH' | sudo tee -a /etc/profile
@@ -125,7 +125,7 @@ cd build
 sudo make -j $(nproc)
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/riscv-gnu-toolchain-64/bin"':$PATH' | sudo tee -a /etc/profile
@@ -173,7 +173,7 @@ sudo make -j $(nproc)
 sudo make install
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/spike/bin"':$PATH' | sudo tee -a /etc/profile
@@ -220,7 +220,7 @@ sudo make -j $(nproc)
 sudo make install
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/verilator/bin"':$PATH' | sudo tee -a /etc/profile
