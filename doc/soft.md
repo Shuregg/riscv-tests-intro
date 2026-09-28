@@ -4,7 +4,8 @@
   - [Перед установкой](#перед-установкой)
   - [Общие зависимости](#общие-зависимости)
   - [Генератор случайных инструкций RISC-V AAPG `2d7d40f`](#генератор-случайных-инструкций-risc-v-aapg-2d7d40f)
-  - [ПО riscv-gnu-toolchain `6d7b5b7`](#по-riscv-gnu-toolchain-6d7b5b7)
+  - [ПО riscv-gnu-toolchain RV32IM `6d7b5b7`](#по-riscv-gnu-toolchain-rv32im-6d7b5b7)
+  - [ПО riscv-gnu-toolchain RV64GCV `6d7b5b7`](#по-riscv-gnu-toolchain-rv64gcv-6d7b5b7)
   - [Программная модель RISC-V Spike ISS `887d02e`](#программная-модель-risc-v-spike-iss-887d02e)
   - [Verilator 5.024 `522bead`](#verilator-5024-522bead)
   - [GTKWave](#gtkwave)
@@ -15,7 +16,7 @@
 
 Установка разбита на шаги. Если какое-то ПО из списка уже установлено на вашей машине, то можно попробовать пропустить его установку. Однако, **если версия ПО не совпадает c указанной в заголовке, то автор не гарантирует его корректной работы в рамках данного курса.**
 
-Подразумевается, что репозиторий склонирован способом, который указан в разделе [работа с репозиторием](../README.md/#работа-с-репозиторием) основого README, а также что вы на каждом этапе находитесь в корневой директории `riscv-tests-basic`.
+Подразумевается, что репозиторий склонирован способом, который указан в разделе [работа с репозиторием](../README.md#клонирование-и-работа) основого README, а также что вы на каждом этапе находитесь в корневой директории `riscv-tests-basic`.
 
 
 ## Общие зависимости
@@ -81,7 +82,7 @@ cd build
 sudo make -j $(nproc)
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/riscv-gnu-toolchain/bin"':$PATH' | sudo tee -a /etc/profile
@@ -124,7 +125,7 @@ cd build
 sudo make -j $(nproc)
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/riscv-gnu-toolchain-64/bin"':$PATH' | sudo tee -a /etc/profile
@@ -172,7 +173,7 @@ sudo make -j $(nproc)
 sudo make install
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/spike/bin"':$PATH' | sudo tee -a /etc/profile
@@ -219,7 +220,7 @@ sudo make -j $(nproc)
 sudo make install
 ```
 
-Добавляем в PATH для всех рользователей:
+Добавляем в PATH для всех пользователей:
 
 ```bash
 echo "PATH=$INSTALL_DIR/verilator/bin"':$PATH' | sudo tee -a /etc/profile
