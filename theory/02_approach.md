@@ -137,6 +137,6 @@ SVA могут быть интегрированы непосредственн�
 
 В [следующем занятии](./03_func.md) будут рассмотрены базовые подходы к функциональной верификации RISC-V ядер на основе симуляции: "Hello world!" и тестирование с самопроверкой.
 
-[^1]: Например, проприеритарные: [Jasper RTL Apps](https://www.cadence.com/en_US/home/tools/system-design-and-verification/formal-and-static-verification/jasper-gold-verification-platform.html), [Questa Formal Verification Apps](https://eda.sw.siemens.com/en-US/ic/questa/formal-verification/), [Synopsys VC Formal](https://www.synopsys.com/verification/static-and-formal-verification/vc-formal.html). Открытые: [SymbiYosys](https://github.com/YosysHQ/sby).
+[^1]: Например, проприетарные: [Jasper RTL Apps](https://www.cadence.com/en_US/home/tools/system-design-and-verification/formal-and-static-verification/jasper-gold-verification-platform.html), [Questa Formal Verification Apps](https://eda.sw.siemens.com/en-US/ic/questa/formal-verification/), [Synopsys VC Formal](https://www.synopsys.com/verification/static-and-formal-verification/vc-formal.html). Открытые: [SymbiYosys](https://github.com/YosysHQ/sby).
 
-[^2]: Изображения из публикации "Особенности современных подходов к верификации RISC-V ядер", [журнал Наноидустрия, спецвыпуск 2024, 10S. том 17(128)](https://disk.yandex.ru/d/H-gAelbinJYvCA).
+[^2]: Изображения из публикации "Особенности современных подходов к верификации RISC-V ядер", [журнал Наноиндустрия, спецвыпуск 2024, 10S. том 17(128)](https://disk.yandex.ru/d/H-gAelbinJYvCA).
